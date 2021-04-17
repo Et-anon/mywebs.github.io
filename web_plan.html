@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title> My Web </title>
+<link rel="stylesheet" href="web_plan.css">
+<meta name="author" charset="UTF-8" >
+</head>
+<body>
+    
+    <form method="GET" autocomplete="on" >
+
+        <h1 align="center"> Welcome </h1><br/>
+        <fieldset id="field" style="align-items: center;">
+         
+        First Name :  <br />
+        <input type="text" placeholder="Enter First Name" step="1" required>
+        <br />
+
+        Last Name :   <br />
+        <input type="text" placeholder="Enter Last Name" step="2" required>
+        <br />
+
+        User Name : <br />
+        <input type="text" placeholder="Enter User Name" step="3" maxlength="7" required>
+        <br />
+
+        Email :  <br />
+        <input type="email" placeholder="Enter Email" step="4" id="Email" onerror="Email()" required>
+       <br />
+       New Passsword : <br />
+       <input type="password"  id="myInput"  placeholder="Enter a new password" required>
+       <br />
+       <input type="checkbox" onclick="myfunction()" id="cbox" >                     Show Password
+<br /> <br />
+  <input type="radio" name="gender" value="male" > Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+
+  <br /><br /><br />
+        
+        <input type="submit"  value="Sign Up" id="signup"  style="align-items: center;">
+        <br /> <br />
+        
+    </fieldset>
+
+    </form>
+    <script >
+        function myfunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+
+            } else {
+                x.type = "password";
+            }
+        }
+     
+         
+    
+         try {
+             adddlert("Welcome ")
+         }
+         catch (err) {
+
+             document.getElementById("Email").innerHTML = err.message;
+         }
+
+
+    </script>
+
+
+</body>
+</html> 
